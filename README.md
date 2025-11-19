@@ -34,20 +34,44 @@ to name a few
 - 🧠 Insights or hypotheses based on your findings
 
 ---
-## 📤 Submission
-- Upload your code ( crawling, ETL, EDA and similar others) to GitHub or share as zip file
-- Include instructions to run the code locally (e.g., python3, django)
-
-> 💡 **Tip:** Creativity in your data gathering approach and depth in your analysis will be rewarded. Think of this as a mini end-to-end data engineering + analysis challenge.
-
-## Connect with Us:
-
-Reach out to **[careers@slooze.xyz](mailto:careers@slooze.xyz)** to submit your solutions or if you may have any questions related to the challenege
-
-## © Copyright Notice
-
-**© Slooze. All Rights Reserved.**
-
-Please do not share or distribute this material outside the intended evaluation process.  
-For queries, contact us !!
-
+data-engineering-challenge/
+│
+├── crawler/
+│   ├── __init__.py
+│   ├── indiamart_scraper.py
+│   └── alibaba_scraper.py     (optional)
+│
+├── etl/
+│   ├── __init__.py
+│   └── etl_process.py         (cleaning, transformation)
+│
+├── eda/
+│   ├── __init__.py
+│   ├── eda_analysis.ipynb     (your notebook)
+│   └── run_eda.py             (script version of EDA)
+│
+├── data/
+│   ├── raw/                   (scraped output)
+│   │    ├── indiamart_*.csv
+│   │    └── alibaba_*.csv
+│   └── processed/             (cleaned CSV)
+│        └── cleaned_data.csv
+│
+├── output/
+│   ├── charts/                (plots saved by EDA)
+│   │    ├── price_hist.png
+│   │    ├── bar_plot.png
+│   │    └── top_companies.png
+│   ├── tables/
+│   │    └── summary.csv
+│   └── report.pptx            (auto-generated PPT)
+│
+├── tests/
+│   ├── __init__.py
+│   └── test_price_parser.py
+│
+├── main.py                    (pipeline runner)
+├── make_report.py             (generate PPT)
+├── requirements.txt
+├── README.md
+└── .gitignore
