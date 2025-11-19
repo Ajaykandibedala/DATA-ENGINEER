@@ -1,0 +1,9 @@
+requests
+beautifulsoup4
+pandas
+numpy
+fake-useragent
+selenium
+lxml
+matplotlib
+notebook
